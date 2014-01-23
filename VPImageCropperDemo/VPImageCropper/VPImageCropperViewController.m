@@ -273,15 +273,9 @@
     CGRect myImageRect = CGRectMake(x, y, w, h);
     CGImageRef imageRef = self.originalImage.CGImage;
     CGImageRef subImageRef = CGImageCreateWithImageInRect(imageRef, myImageRect);
-    CGSize size;
-    size.width = myImageRect.size.width;
-    size.height = myImageRect.size.height;
-    UIGraphicsBeginImageContext(size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextDrawImage(context, myImageRect, subImageRef);
-    UIImage* smallImage = [UIImage imageWithCGImage:subImageRef];
-    UIGraphicsEndImageContext();
-    return smallImage;
+    UIImage *subImage = [UIImage imageWithCGImage:subImageRef scale:self.originalImage.scale orientation:self.originalImage.imageOrientation];
+    CGImageRelease(subImageRef);
+    return subImage;
 }
 
 @end
