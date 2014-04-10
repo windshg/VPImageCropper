@@ -60,6 +60,8 @@
 }
 
 - (void)initView {
+    self.view.backgroundColor = [UIColor blackColor];
+    
     self.showImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.showImgView setMultipleTouchEnabled:YES];
     [self.showImgView setUserInteractionEnabled:YES];
@@ -257,7 +259,7 @@
     CGFloat x = (squareFrame.origin.x - self.latestFrame.origin.x) / scaleRatio;
     CGFloat y = (squareFrame.origin.y - self.latestFrame.origin.y) / scaleRatio;
     CGFloat w = squareFrame.size.width / scaleRatio;
-    CGFloat h = squareFrame.size.width / scaleRatio;
+    CGFloat h = squareFrame.size.height / scaleRatio;
     if (self.latestFrame.size.width < self.cropFrame.size.width) {
         CGFloat newW = self.originalImage.size.width;
         CGFloat newH = newW * (self.cropFrame.size.height / self.cropFrame.size.width);
