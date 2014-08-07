@@ -1,10 +1,8 @@
 VPImageCropper
 ==============
 
-That was a long night. I felt lonely and horny. Then I tried to find something to do. I took out my iPhone and open WeChat, I checked the messages and glanced over the Friends Circle. I also tried to upload my new portrait then I found the image cropper in WeChat was kind of funny. Out of nowhere, I decided to write a toy analogously instead of watching porn. All right, let's skip all these crap and get to the point.
-
 ##Usage
-It's just bloody easy to use this kit. Before present the cropper view controller, you should implement the protocol ``VPImageCropperDelegate``:
+It's incredibly easy to use this kit. Before present the cropper view controller, you should implement the protocol ``VPImageCropperDelegate``:
 
 ```ObjectiveC
 // callback when cropping finished
